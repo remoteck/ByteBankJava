@@ -1,10 +1,10 @@
 package com.ggperroni;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private final String nome;
     private final int cpf;
-    private double salario;
+    private final double salario;
 
     public Funcionario(String nome, int cpf, double salario) {
         this.nome = nome;
@@ -24,7 +24,5 @@ public class Funcionario {
         return salario;
     }
 
-    public double getBonificacao() {
-        return this.salario *= 0.1;
-    }
+    public abstract double getBonificacao();
 }
